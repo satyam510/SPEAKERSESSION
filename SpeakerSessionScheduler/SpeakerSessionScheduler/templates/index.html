@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Speaker Session Booking{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="mt-5">Speaker Session Booking</h1>
+    <p class="lead">A platform for booking sessions with experts</p>
+    <hr class="my-4">
+    <p>Welcome to the Speaker Session Booking platform. This application provides a backend API for managing speaker profiles, time slots, and session bookings.</p>
+    
+    <div class="mt-5">
+        <h2>API Documentation</h2>
+        <p>Explore the API documentation to understand available endpoints:</p>
+        <a href="/api/docs/swagger" class="btn btn-primary btn-lg">View API Documentation</a>
+    </div>
+    
+    <div class="mt-5">
+        <h2>Key Features</h2>
+        <ul class="list-group my-4">
+            <li class="list-group-item">User and Speaker authentication with OTP verification</li>
+            <li class="list-group-item">Speaker profile creation and management</li>
+            <li class="list-group-item">Time slot availability management for speakers</li>
+            <li class="list-group-item">Session booking system with calendar integration</li>
+            <li class="list-group-item">Email notifications for bookings</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

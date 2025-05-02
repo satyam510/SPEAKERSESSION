@@ -1,0 +1,55 @@
+Speaker Session Booking
+● Description : Your objective is to develop a backend system allowing users to book
+speaker sessions from the available speaker listings on the platform. Users should be
+able to browse through the list of speakers, and book sessions based on their
+availability. Your task involves implementing the necessary functionalities to facilitate
+speaker session bookings effectively.
+● Technologies
+○ Choose a backend framework like Express/Fastify (Node.js), FastAPI/Flask
+(Python), or Gin/Fibre (Golang)
+○ Database: MongoDB or PostgreSQL. (You can use ORMs like Prisma and
+Drizzle.)
+○ Brownie points for using Typescript.
+
+● Tasks
+1. User and Speaker Profiles
+● Users and speakers can create profiles using basic details such as first name,
+last name, email, and password.
+● User accounts need to be OTP (One-Time Password) verified before they can
+sign in.
+● After successful account creation, users and speakers should be able to log in
+using their credentials.
+● Implement authentication mechanisms to verify user/speaker credentials
+during login.
+● Upon successful login, generate and return an authentication token to the
+client.
+Note:
+● All the protected routes must verify the auth token and grant access
+accordingly.
+● For endpoint access control, consider implementing a middleware that
+grants access to API based on user_type, ensuring appropriate role-based
+access.
+2. Speaker Listing and Expertise (protected route)
+● Speakers can list their profiles by adding their expertise and specifying the
+price per session.
+● Ensure that the route is protected and only speaker profiles can access it
+(Authentication and Authorization).
+3. Session Booking (protected route)
+● Users should be able to view the list of speakers.
+● To book a session user must be logged in first.
+● Each speaker will have time slots available for booking, with availability
+between 9 AM and 4 PM. Time slots must be allocated in intervals of 1 hour
+each, providing flexibility for users to schedule sessions according to their
+preferences.
+4. Time Slot Blocking
+● When a user books a session with a speaker, the corresponding time slot for
+that day should be blocked, ensuring no double bookings occur for that
+particular time slot.
+5. Email Notifications and Calendar Event (protected route)
+● Upon successful booking, an email notification should be sent to both the
+speaker and the user.
+● Additionally, a Google Calendar event is created and sent to both parties to
+remind them of the scheduled session.
+
+6. Documentation
+● Document all the endpoints comprehensively. (Use Swagger/Postman)
